@@ -61,3 +61,39 @@ for(let i = 0 ; i < scores.length ; i++){
 
 
 
+const grade = 80
+
+switch(grade){
+    case '50':
+        console.log('one');
+        break;
+    case 80:
+        console.log('two');
+        break;
+    case '80':
+        console.log('found')
+        break;
+    default:
+        console.log('Invalid nigga try again')
+        break;
+}
+
+
+
+//Let and const are used to define any variable as a global scope or a local scope
+// whereas var is always defined as global
+
+
+const name = 'Aditya';
+let age = 30;
+
+if(true){
+    age = 'Ayesha'
+    console.log(name, age);
+    if(true){
+        age = 8
+        console.log(name, age)
+        var heva = 90
+    }
+}
+console.log(name, age, heva)
