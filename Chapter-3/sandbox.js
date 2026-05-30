@@ -25,5 +25,13 @@ while(i < 5){
 
 const names1 = ['aditya', 'bhandari', 'annie'];
 
+if(names1.length>3){
+    console.log("Correct");
+}
+else{
+    console.log("Wrong")
+}
 
+
+//Starting logical operators
 
