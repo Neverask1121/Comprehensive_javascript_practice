@@ -99,3 +99,71 @@ console.log(greet());
 let name = 'Aditya'
 
 console.log(name.toUpperCase());
+
+
+
+
+//callback functions
+
+
+
+const funk = (call_back) => {
+    let value = 50;
+    call_back(value);
+};
+
+
+funk( value =>{
+    console.log(value);
+});
+
+
+
+// array methods
+
+
+const function1 = (callbackfunction1) =>{
+    let value = 50;
+    callbackfunction1(value);
+};
+
+
+function1(value =>{
+  console.log(value);  
+});
+
+
+
+// array methods forEACH
+
+
+let ppl = ['ayesha', 'aditya', 'aman', 'madison', 'alina'];
+
+ppl.forEach((person, index) => {
+    console.log(index, person);
+    console.log(`Hello ${person}`);    
+});
+
+
+
+// using query selector
+
+const ul = document.querySelector('.pple')
+
+const pple = ['ayesha', 'aditya', 'aman', 'madison', 'alina'];
+
+let html = ``;
+
+
+pple.forEach((person, index) => {
+    html += `<li style = "color: purple">${ person}</li>`;
+
+});
+
+console.log(html);
+ul.innerHTML = html;
+
+
+
+
+
