@@ -39,3 +39,22 @@ paras.forEach(para => {
 
 const niggas = document.querySelectorAll(".error");
 console.log(niggas);
+
+
+// grabbibg the element by its id
+
+
+const element_id = document.getElementById("page-title");
+console.log(element_id);
+
+
+//getting elements by their class name
+
+
+const element_class = document.getElementsByClassName("error");
+console.log(element_class);
+
+const paras1 = document.getElementsByTagName('p');
+console.log(paras1[0]);
+
+
