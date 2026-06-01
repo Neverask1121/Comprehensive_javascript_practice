@@ -36,3 +36,49 @@ console.log(typeof(user));
 console.log(this);
 
 user.logBlogs();
+
+
+
+//Math objects
+
+console.log(Math);
+console.log(Math.Pi);
+
+console.log(Math.round(7.7));
+
+console.log(Math.floor(7.7));
+
+
+console.log(Math.ceil(8.7));
+
+console.log(Math.trunc(7.7));
+
+
+console.log(Math.round(Math.random() * 100))
+
+
+
+
+
+
+//Primitive values
+
+
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+
+
+console.log(`${scoreOne} is equal to the ${scoreTwo}`);
+
+
+
+
+// reference values
+
+
+const userOne = {name: 'Aditya', age: '18'};
+const userTwo = userOne;
+console.log(userOne, userTwo);
+userOne.name = 'Alia';
+
+console.log(userOne, userTwo);
