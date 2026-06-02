@@ -58,3 +58,35 @@ const paras1 = document.getElementsByTagName('p');
 console.log(paras1[0]);
 
 
+// actuallly changing something in the html file
+
+
+const jerling_to_neighbour = document.querySelector('p');
+console.log(jerling_to_neighbour.innerText);
+
+//changng in the html page now
+
+jerling_to_neighbour.innerText = "Niggas don't lie at all";
+
+//to append to the text
+
+jerling_to_neighbour.innerText += " Niggas don't lie at all";
+
+
+// now output all the text containing p
+
+const pussies = document.querySelectorAll('p');
+
+pussies.forEach(element => {
+    console.log(element.innerText);
+    element.innerText += " Jerking"
+});
+
+
+const content = document.querySelector('div.error');
+content.innerHTML = "<h2>This is new error</h2>";
+
+// to append something
+
+const content = document.querySelector('div.error');
+content.innerHTML = "<h2>This is new error</h2>";
