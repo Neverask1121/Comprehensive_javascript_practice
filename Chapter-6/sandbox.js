@@ -88,5 +88,11 @@ content.innerHTML = "<h2>This is new error</h2>";
 
 // to append something
 
-const content = document.querySelector('div.error');
-content.innerHTML = "<h2>This is new error</h2>";
+//const content = document.querySelector('div.error');
+//content.innerHTML = "<h2>This is new error</h2>";
+
+const ppll = ['Aditya', 'Alina', 'Ash'];
+
+ppll.forEach(element => {
+    content.innerHTML += `<p>${element}</p>`;
+});
