@@ -96,3 +96,36 @@ const ppll = ['Aditya', 'Alina', 'Ash'];
 ppll.forEach(element => {
     content.innerHTML += `<p>${element}</p>`;
 });
+
+
+
+// changing the href elements
+
+
+const link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+
+link.setAttribute('href', 'https://www.bing.com');
+
+link.innerText = 'Change is coming bro';
+
+const mida = document.querySelector('p');
+console.log(mida.getAttribute('class'));
+
+mida.setAttribute('class', 'The weather is beaultiful like her skin')
+// setting a new attribute
+mida.setAttribute('style', 'color: green;');
+
+
+
+
+
+
+
+
+
+
+
+
+
