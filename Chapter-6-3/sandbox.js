@@ -18,6 +18,8 @@ items.forEach((item) => {
 
 items.forEach((item) => {
     item.addEventListener('click', (e) => {
-        console.log('item clicked');
+        // console.log(e.target);
+        // console.log(item);
+        
     });
 });
