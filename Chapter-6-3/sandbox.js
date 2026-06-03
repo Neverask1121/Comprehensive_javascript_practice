@@ -20,6 +20,6 @@ items.forEach((item) => {
     item.addEventListener('click', (e) => {
         // console.log(e.target);
         // console.log(item);
-        
+        e.target.style.textDecoration = "line-through";
     });
 });
