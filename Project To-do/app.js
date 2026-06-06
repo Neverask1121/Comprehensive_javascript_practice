@@ -20,3 +20,12 @@ addForm.addEventListener('submit', e => {
     // to reset what user has typed in the form
    addForm.reset(); 
 });
+
+
+// adding the delete buttons functionality
+
+list.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
+});
