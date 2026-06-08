@@ -12,7 +12,7 @@
 // Placing all the below stuff in a function
 
 
-const todos = (callback) => {
+const todos = (resource, callback) => {
   // Making a http request
 
   const request = new XMLHttpRequest();
@@ -34,7 +34,7 @@ const todos = (callback) => {
   // to open the request here
 
 
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todos');
+  request.open('GET', resource);
 
 
 
@@ -43,23 +43,30 @@ const todos = (callback) => {
   request.send();
 };
 
-console.log(1);
-console.log(2);
+// console.log(1);
+// console.log(2);
 
+// The below is called as CallBack hell 
 
-todos((err, data) => {
-  console.log('callback is fired success');
-  // console.log(err, data);
-
-  if(err){
-    console.log(err);
-  }
-  else{
+todos("todos/Aditya.json", (err, data) => {
+  console.log(data);
+  todos("todos/Ayesha.json", (err, data) => {
     console.log(data);
-  }
+    todos("todos/Aman.json", (err, data) => {
+      console.log(data);
+    });
+  });
+  // // console.log(err, data);
+
+  // if(err){
+  //   console.log(err);
+  // }
+  // else{
+  //   console.log(data);
+  // }
 
 });
 
 
-console.log(3);
-console.log(4);
+// console.log(3);
+// console.log(4);
