@@ -23,10 +23,10 @@ const todos = (callback) => {
     // console.log(request, request.readyState);
     // we can do something only at this stage
     if(request.readyState === 4 && request.status == 200){
-      callback();
+      callback(undefined, request.responseText);
     }
     else if(request.readyState === 4){
-      callback();
+      callback("The callback function could not get fired..., mistake in the url", undefined);
     }
   });
 
@@ -43,6 +43,23 @@ const todos = (callback) => {
   request.send();
 };
 
-todos(() => {
-  console.log('callback is fired success')
+console.log(1);
+console.log(2);
+
+
+todos((err, data) => {
+  console.log('callback is fired success');
+  // console.log(err, data);
+
+  if(err){
+    console.log(err);
+  }
+  else{
+    console.log(data);
+  }
+
 });
+
+
+console.log(3);
+console.log(4);
