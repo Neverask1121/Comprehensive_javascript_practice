@@ -9,29 +9,40 @@
 // console.log(1);
 
 
+// Placing all the below stuff in a function
 
-// Making a http request
 
-const request = new XMLHttpRequest();
+const todos = (callback) => {
+  // Making a http request
 
-// logging the request state change in the console
+  const request = new XMLHttpRequest();
 
-request.addEventListener('readystatechange', () => {
-  // console.log(request, request.readyState);
-  // we can do something only at this stage
-  if(request.readyState === 4 && request.status == 200){
-    console.log(request, request.responseText);
-  }
+  // logging the request state change in the console
+
+  request.addEventListener('readystatechange', () => {
+    // console.log(request, request.readyState);
+    // we can do something only at this stage
+    if(request.readyState === 4 && request.status == 200){
+      callback();
+    }
+    else if(request.readyState === 4){
+      callback();
+    }
+  });
+
+
+  // to open the request here
+
+
+  request.open('GET', 'https://jsonplaceholder.typicode.com/todos');
+
+
+
+  // now actually sending the request
+
+  request.send();
+};
+
+todos(() => {
+  console.log('callback is fired success')
 });
-
-
-// to open the request here
-
-
-request.open('GET', 'https://jsonplaceholder.typicode.com/todos');
-
-
-
-// now actually sending the request
-
-request.send();
