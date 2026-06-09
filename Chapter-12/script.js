@@ -12,36 +12,36 @@
 // Placing all the below stuff in a function
 
 
-const todos = (resource, callback) => {
-  // Making a http request
+// const todos = (resource, callback) => {
+//   // Making a http request
 
-  const request = new XMLHttpRequest();
+//   const request = new XMLHttpRequest();
 
-  // logging the request state change in the console
+//   // logging the request state change in the console
 
-  request.addEventListener('readystatechange', () => {
-    // console.log(request, request.readyState);
-    // we can do something only at this stage
-    if(request.readyState === 4 && request.status == 200){
-      callback(undefined, request.responseText);
-    }
-    else if(request.readyState === 4){
-      callback("The callback function could not get fired..., mistake in the url", undefined);
-    }
-  });
-
-
-  // to open the request here
+//   request.addEventListener('readystatechange', () => {
+//     // console.log(request, request.readyState);
+//     // we can do something only at this stage
+//     if(request.readyState === 4 && request.status == 200){
+//       callback(undefined, request.responseText);
+//     }
+//     else if(request.readyState === 4){
+//       callback("The callback function could not get fired..., mistake in the url", undefined);
+//     }
+//   });
 
 
-  request.open('GET', resource);
+//   // to open the request here
+
+
+//   request.open('GET', resource);
 
 
 
-  // now actually sending the request
+//   // now actually sending the request
 
-  request.send();
-};
+//   request.send();
+// };
 
 // console.log(1);
 // console.log(2);
@@ -70,3 +70,34 @@ todos("todos/Aditya.json", (err, data) => {
 
 // console.log(3);
 // console.log(4);
+
+// Promises example
+
+console.log(1);
+
+const getSomething = () =>{
+
+  return new Promise((reject, resolve) => {
+    // we are going to fetch some data
+    resolve("We are resolving data here, data");
+    reject("We are rejecting data here, error");
+  });
+};
+
+// This is how we resolve promises
+
+// getSomething().then((data) => {
+//   console.log(data);
+// }, (err) => {
+//   console.log(err);
+// });
+
+// Or we cn resolve it like this
+
+getSomething().then( data => {
+  console.log(data);
+}).catch(err => {
+  console.log(err);
+});
+
+console.log(2);
