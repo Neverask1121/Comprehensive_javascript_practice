@@ -45,7 +45,13 @@ const getTodos = (resource) => {
 
 
 getTodos('todos/Aditya.json').then(data => {
-  console.log('promise resolved: ', data);
+  console.log('promise resolved 1: ', data);
+  return getTodos('todos/Aman.json').then(data => {
+    console.log('promise resolved 2: ', data);
+    return getTodos('todos/Ayesha.json').then(data => {
+      console.log('promise resolved 3: ', data);
+    })
+  })
 }).catch( err => {
   console.log('promise rejected: ', err)
 })
