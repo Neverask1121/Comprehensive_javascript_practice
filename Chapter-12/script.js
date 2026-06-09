@@ -167,8 +167,22 @@
 // A async function always returns a promise
 
 const todos = async () => {
+  const response = await fetch ('todos/aditya.json');
+  // throw object creation
+  if(response.status !== 200){
+    throw new Error('Cannot be able to fetch data');
+  }
 
+  const data = await response.json();
+  return data;
 };
 
-const test = todos();
-console.log(test);
+console.log(1);
+console.log(1);
+
+todos()
+  .then(data => console.log("resolved: ", data))
+  .catch(err => console.log("rejected: ", err.message));
+
+console.log(1);
+console.log(1);
